@@ -1,18 +1,7 @@
 import { Container } from "@mui/material";
-import Quiz from "./components/Quiz";
+import QuizView from "./Pages/QuizView";
 
 function App() {
-  type Question = {
-    question: string;
-    answers: string[];
-    correctAnswer: number;
-  };
-
-  const questionProps: Question = {
-    question: "What is the capital of France?",
-    answers: ["Berlin", "Madrid", "Paris", "Rome"],
-    correctAnswer: 2,
-  };
 
   return (
     <Container
@@ -23,7 +12,7 @@ function App() {
         minHeight: "100vh",
       }}
     >
-      <Quiz {...questionProps} />
+      <QuizView />
     </Container>
   );
 }
