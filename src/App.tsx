@@ -1,12 +1,20 @@
-import { Container } from "@mui/material"
-import Quiz from "./components/Quiz"
+import { Container } from "@mui/material";
+import QuizView from "./Pages/QuizView";
 
 function App() {
+
   return (
-    <Container>
-      <Quiz />
+    <Container
+      sx={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <QuizView />
     </Container>
-  )
+  );
 }
 
-export default App
+export default App;
