@@ -1,19 +1,13 @@
-import { Container } from "@mui/material";
-import QuizView from "./Pages/QuizView";
+
+import AdminView from "./Pages/Admin/AdminView";
+// import QuizView from "./Pages/QuizView";
 
 function App() {
 
   return (
-    <Container
-      sx={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-      }}
-    >
-      <QuizView />
-    </Container>
+    
+      <AdminView />
+      // <QuizView />
   );
 }
 
