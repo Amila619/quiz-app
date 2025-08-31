@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, Container } from "@mui/material";
 import Quiz from "../components/Quiz";
 
 export default function QuizView() {
@@ -105,29 +105,38 @@ export default function QuizView() {
   };
 
   return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        gap: 16,
-      }}
+    <Container
+    sx={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      minHeight: "100vh",
+    }}
     >
-      <Box>
-        <Quiz {...questionProps} />
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: 4,
-            mt: 3,
-          }}
-        >
-          <Button sx={buttonStyles_01}>Prev</Button>
-          <Button sx={buttonStyles_02}>Next</Button>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap: 16,
+        }}
+      >
+        <Box>
+          <Quiz {...questionProps} />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              gap: 4,
+              mt: 3,
+            }}
+          >
+            <Button sx={buttonStyles_01}>Prev</Button>
+            <Button sx={buttonStyles_02}>Next</Button>
+          </Box>
         </Box>
+        <QuestionNavigatorPane />
       </Box>
-      <QuestionNavigatorPane />
-    </Box>
+    </Container>
   );
 }
